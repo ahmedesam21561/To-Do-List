@@ -1,0 +1,14 @@
+<h1 id="completed-tasks">Completed Tasks</h1>
+<hr>
+<ul *ngFor="let todo of todos">
+    <li *ngIf="todo.isCompletted">
+        <div>
+            <div class="col-sm-6 col-md-3 col-xl-3">
+                <p> {{todo.Title}} </p>
+            </div>
+            <div class="col-sm-6 col-md-1 col-xl-1">
+                <button (click)="onDelete(todo.ID)" class="btn btn-danger">delete</button>
+            </div>
+        </div>
+    </li>
+</ul>
